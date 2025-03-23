@@ -1,17 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Wallet Connect Template
+
+A modern Next.js 15 template for building Web3 applications with wallet connection capabilities.
+
+## Features
+
+- **Next.js 15** with App Router and TurboPack
+- **Web3 Integration** with ethers.js and Reown AppKit
+- **Modern UI** with TailwindCSS and Framer Motion
+- **TypeScript** for type safety
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
 
 ```bash
-npm run dev
-# or
+yarn 
+```
+
+Then, run the development server:
+
+```bash
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
