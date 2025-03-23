@@ -29,6 +29,27 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Ethereum Development (Using Ethers)
+
+You will need to import these first:
+
+```bash
+import { ethers, Eip1193Provider } from "ethers";
+import { useAppKitAccount, useAppKitProvider } from "@reown/appkit/react";
+```
+
+To interact with contract:
+```bash
+
+#  // Get current user's wallet address
+const { address: currentUserAddress } = useAppKitAccount();
+const { walletProvider } = useAppKitProvider("eip155");
+
+const provider = new ethers.BrowserProvider(walletProvider as Eip1193Provider);
+const signer = await provider.getSigner();
+const contract = new ethers.Contract(Contract_Address, Contract_ABI, signer);
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
